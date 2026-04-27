@@ -3,220 +3,1152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quarkvolt — AI Quantum Energy Intelligence</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>QuarkVolt — Advanced Energy Technology | Lithium Battery & EV Charging Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--white:#FFF;--off:#F7F9FC;--teal:#0D9488;--teal2:#14B8A6;--teal3:#5EEAD4;--teal-light:#F0FDFA;--navy:#0C1F3F;--gold2:#F59E0B;--gold-light:#FFFBEB;--green:#059669;--green-light:#ECFDF5;--ink:#111827;--ink2:#1F2937;--ink3:#374151;--muted:#6B7280;--muted2:#9CA3AF;--border:#E5E7EB;--border2:#D1D5DB;--red:#DC2626}
-html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);box-shadow:0 1px 12px rgba(0,0,0,0.06)}
-.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--navy);text-decoration:none}.logo span{color:var(--teal)}
-.nav-ul{display:flex;gap:2rem;list-style:none}.nav-ul a{color:var(--ink3);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s;cursor:pointer}.nav-ul a:hover{color:var(--teal)}
-.nav-cta{background:var(--teal);color:#fff;border:none;padding:0.55rem 1.4rem;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;font-weight:600;cursor:pointer;transition:all 0.2s}.nav-cta:hover{background:var(--teal2);transform:translateY(-1px)}
-.hero{min-height:100vh;background:linear-gradient(150deg,#F0FDF9 0%,#FFF 45%,#FFF7ED 100%);display:flex;align-items:center;padding:7rem 5% 4rem;position:relative;overflow:hidden}
-.orb1{position:absolute;top:-15%;right:-8%;width:550px;height:550px;background:radial-gradient(circle,rgba(20,184,166,0.1),transparent 70%);border-radius:50%;pointer-events:none}
-.orb2{position:absolute;bottom:-10%;left:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(217,119,6,0.08),transparent 70%);border-radius:50%;pointer-events:none}
-.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;width:100%}
-.badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--teal-light);border:1px solid rgba(13,148,136,0.2);color:var(--teal);font-size:0.75rem;font-weight:600;padding:0.4rem 0.9rem;border-radius:20px;margin-bottom:1.5rem}
-.bd{width:6px;height:6px;background:var(--teal2);border-radius:50%;animation:bl 2s infinite}
-@keyframes bl{0%,100%{opacity:1}50%{opacity:0.3}}
-h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:700;line-height:1.15;color:var(--navy);margin-bottom:1.2rem;letter-spacing:-0.02em}
-h1 em{font-style:italic;color:var(--teal)}
-.hsub{font-size:1rem;color:var(--muted);line-height:1.8;max-width:480px;margin-bottom:2rem}
-.hbtns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.btn-p{background:var(--teal);color:#fff;border:none;padding:0.9rem 2rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 16px rgba(13,148,136,0.3)}.btn-p:hover{background:var(--teal2);transform:translateY(-2px)}
-.btn-s{background:transparent;color:var(--navy);border:2px solid var(--border2);padding:0.9rem 2rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.2s}.btn-s:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-light)}
-.tpills{display:flex;gap:1.2rem;flex-wrap:wrap}.tp{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:var(--muted);font-weight:500}
-.hright{display:flex;flex-direction:column;gap:1rem}
-.sc{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.5rem;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:transform 0.2s}.sc:hover{transform:translateY(-2px)}
-.sc.ft{background:var(--navy);color:#fff}
-.sc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.8rem}
-.sc-ic{width:40px;height:40px;background:var(--teal-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}.ft .sc-ic{background:rgba(255,255,255,0.15)}
-.sc-bg{font-size:0.68rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;background:var(--green-light);color:var(--green);padding:0.2rem 0.6rem;border-radius:20px}.ft .sc-bg{background:rgba(255,255,255,0.2);color:#fff}
-.sc-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--navy);line-height:1}.ft .sc-n{color:#fff}
-.sc-l{font-size:0.8rem;color:var(--muted);margin-top:0.3rem}.ft .sc-l{color:rgba(255,255,255,0.6)}
-.sc-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.tbar{background:var(--navy);padding:3.5rem 5%}
-.tb-in{max-width:1200px;margin:0 auto}
-.tb-lbl{text-align:center;font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:2rem}
-.tb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
-.tb-it{text-align:center}
-.tb-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--gold2);display:block;line-height:1}
-.tb-l{font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.4rem}
-.wrap{max-width:1200px;margin:0 auto;padding:6rem 5%}
-.stag{display:inline-flex;align-items:center;gap:0.5rem;background:var(--teal-light);color:var(--teal);font-size:0.72rem;font-weight:600;padding:0.35rem 0.8rem;border-radius:20px;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:1rem}
-h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:0.8rem;letter-spacing:-0.02em}
-h2 em{font-style:italic;color:var(--teal)}
-.fg3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.fc{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.3s}.fc:hover{box-shadow:0 8px 32px rgba(13,148,136,0.1);border-color:rgba(13,148,136,0.25);transform:translateY(-3px)}
-.fc-ic{width:48px;height:48px;background:var(--teal-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.2rem}
-.fc h3{font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:0.5rem}.fc p{font-size:0.84rem;color:var(--muted);line-height:1.7}
-.how-bg{background:var(--off)}
-.demo-bg{background:linear-gradient(160deg,var(--teal-light),var(--white))}
-.demo-in{max-width:1200px;margin:0 auto;padding:6rem 5%;display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:center}
-.dash{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.1)}
-.dash-hd{background:var(--navy);padding:1.2rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
-.dash-title{font-size:0.82rem;color:rgba(255,255,255,0.7);font-weight:500}
-.dash-live{display:flex;align-items:center;gap:0.5rem;font-size:0.72rem;color:#4ADE80}
-.ld{width:6px;height:6px;background:#4ADE80;border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-.dash-bd{padding:1.5rem;display:flex;flex-direction:column;gap:1rem}
-.dstat{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;background:var(--off);border-radius:10px;border:1px solid var(--border)}
-.ds-lbl{font-size:0.8rem;color:var(--muted)}.ds-val{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--teal)}.ds-chg{font-size:0.72rem;color:var(--green);font-weight:600}
-.dbar{padding:1rem 1.2rem;background:var(--off);border-radius:10px;border:1px solid var(--border)}
-.dbar-top{display:flex;justify-content:space-between;font-size:0.76rem;margin-bottom:0.5rem;color:var(--muted)}.dbar-val{color:var(--teal);font-weight:600}
-.bar-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden}.bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--teal),var(--teal3))}
-/* CHATBOT */
-.cs{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.cw{max-width:860px;margin:0 auto}
-.chatbot{background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.1)}
-.bh{background:var(--navy);padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem}
-.bav{width:42px;height:42px;background:linear-gradient(135deg,var(--teal2),var(--teal));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.bi h4{font-size:0.95rem;color:#fff;font-weight:600}.bi p{font-size:0.72rem;color:rgba(255,255,255,0.5)}
-.bst{margin-left:auto;display:flex;align-items:center;gap:0.5rem;font-size:0.72rem;color:#4ADE80}
-.sdot{width:7px;height:7px;background:#4ADE80;border-radius:50%;animation:pulse 2s infinite}
-.bmsgs{padding:1.5rem;min-height:300px;max-height:360px;overflow-y:auto;display:flex;flex-direction:column;gap:1rem;scroll-behavior:smooth}
-.bmsgs::-webkit-scrollbar{width:4px}.bmsgs::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
-.bm{display:flex;gap:0.7rem;align-items:flex-end;max-width:85%}.bm.u{align-self:flex-end;flex-direction:row-reverse}
-.bmav{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0}
-.bmav.b{background:var(--teal-light);color:var(--teal)}.bmav.u{background:var(--teal);color:#fff}
-.bb{padding:0.85rem 1.1rem;border-radius:14px;font-size:0.85rem;line-height:1.6}
-.bm.bot .bb{background:var(--off);color:var(--ink2);border-bottom-left-radius:4px}
-.bm.u .bb{background:var(--teal);color:#fff;border-bottom-right-radius:4px}
-.bb b{font-weight:600}.img-p{max-width:180px;border-radius:8px;margin-top:0.5rem;display:block}
-.tind{display:none;align-items:center;gap:4px;padding:0.7rem 1rem;background:var(--off);border-radius:14px;border-bottom-left-radius:4px;width:fit-content}.tind.show{display:flex}
-.td{width:6px;height:6px;background:var(--muted2);border-radius:50%;animation:tdb 1.2s infinite}.td:nth-child(2){animation-delay:0.2s}.td:nth-child(3){animation-delay:0.4s}
-@keyframes tdb{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
-.qrs{padding:0 1.5rem 1rem;display:flex;gap:0.5rem;flex-wrap:wrap}
-.qr{background:var(--teal-light);color:var(--teal);border:1px solid rgba(13,148,136,0.2);border-radius:20px;padding:0.4rem 0.9rem;font-size:0.76rem;font-weight:500;cursor:pointer;transition:all 0.2s;white-space:nowrap}.qr:hover{background:var(--teal);color:#fff}
-.bia{border-top:1px solid var(--border);padding:1rem 1.2rem;display:flex;flex-direction:column;gap:0.8rem}
-.upr{display:none;align-items:center;gap:0.7rem;background:var(--teal-light);border:1px solid rgba(13,148,136,0.2);border-radius:10px;padding:0.6rem 1rem;font-size:0.8rem;color:var(--teal)}.upr.show{display:flex}
-.urm{background:none;border:none;cursor:pointer;color:var(--red);font-size:1rem;padding:0;line-height:1}
-.ir{display:flex;gap:0.8rem;align-items:flex-end}
-.ubtn{background:var(--off);border:1px solid var(--border);color:var(--muted);width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;flex-shrink:0;font-size:1rem}.ubtn:hover{background:var(--teal-light);color:var(--teal);border-color:rgba(13,148,136,0.3)}
-.binp{flex:1;border:1px solid var(--border);border-radius:12px;padding:0.75rem 1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.87rem;color:var(--ink);outline:none;resize:none;transition:border 0.2s;background:var(--white);min-height:44px;max-height:100px}.binp:focus{border-color:var(--teal2)}
-.bsnd{background:var(--teal);color:#fff;border:none;width:44px;height:44px;border-radius:12px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}.bsnd:hover{background:var(--teal2)}.bsnd:disabled{opacity:0.5;cursor:not-allowed}
-.inote{font-size:0.72rem;color:var(--muted2);text-align:center}
-/* FOR SALE */
-.sale{background:linear-gradient(135deg,var(--navy) 0%,#0D3060 100%);padding:6rem 5%;position:relative;overflow:hidden}
-.sale-orb{position:absolute;right:-10%;top:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(245,158,11,0.12),transparent 70%);border-radius:50%;pointer-events:none}
-.si{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1}
-.stag-gold{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:var(--gold2);font-size:0.75rem;font-weight:600;padding:0.4rem 1rem;border-radius:20px;margin-bottom:1.5rem;letter-spacing:0.05em;text-transform:uppercase}
-.sgd{width:6px;height:6px;background:var(--gold2);border-radius:50%;animation:bl 2s infinite}
-.sale h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:1rem}
-.sale h2 em{font-style:italic;color:var(--gold2)}
-.sale p{font-size:0.95rem;color:rgba(255,255,255,0.6);line-height:1.8;max-width:560px;margin:0 auto 2.5rem}
-.spb{background:rgba(255,255,255,0.05);border:1px solid rgba(245,158,11,0.25);border-radius:20px;padding:2.5rem;margin-bottom:2.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
-.spbi{text-align:center}
-.spbi-l{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.5rem}
-.spbi-v{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold2)}
-.spbi-n{font-size:0.76rem;color:rgba(255,255,255,0.4);margin-top:0.2rem}
-.sfeats{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
-.sf{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:rgba(255,255,255,0.65);font-weight:500}
-.sbtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn-buy{background:var(--gold2);color:var(--navy);border:none;padding:1rem 2.5rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(245,158,11,0.4)}.btn-buy:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(245,158,11,0.5)}
-.btn-off{background:transparent;color:rgba(255,255,255,0.8);border:1.5px solid rgba(255,255,255,0.25);padding:1rem 2.5rem;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.2s}.btn-off:hover{border-color:var(--gold2);color:var(--gold2)}
-/* CONTACT */
-.cg{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-.tsigs{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
-.ts{display:flex;align-items:center;gap:1rem;padding:1rem;background:var(--off);border-radius:12px;border:1px solid var(--border)}
-.ts-ic{width:40px;height:40px;background:var(--teal-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.ts-tx h5{font-size:0.85rem;font-weight:600;color:var(--navy);margin-bottom:0.1rem}.ts-tx p{font-size:0.78rem;color:var(--muted)}
-.cf{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
-.cf-t{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:0.3rem}
-.cf-s{font-size:0.82rem;color:var(--muted);margin-bottom:1.5rem}
-.fw{display:flex;flex-direction:column;gap:1rem}
-.fr{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.fg{display:flex;flex-direction:column;gap:0.35rem}
-.fg label{font-size:0.72rem;font-weight:600;color:var(--ink3)}
-.fg input,.fg select,.fg textarea{background:var(--off);border:1.5px solid var(--border);color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.87rem;padding:0.8rem 1rem;outline:none;transition:all 0.2s;width:100%;border-radius:10px}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--teal2);background:var(--white);box-shadow:0 0 0 3px rgba(13,148,136,0.1)}
-.fg textarea{resize:vertical;min-height:80px}
-.bsub{background:var(--teal);color:#fff;border:none;padding:1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.25s;width:100%;border-radius:10px;box-shadow:0 4px 16px rgba(13,148,136,0.3)}.bsub:hover{background:var(--teal2)}.bsub:disabled{opacity:0.6;cursor:not-allowed}
-.fnote{font-size:0.72rem;color:var(--muted2);text-align:center;margin-top:0.3rem}
-.suc{display:none;background:var(--green-light);border:1px solid rgba(5,150,105,0.2);padding:1.5rem;border-radius:12px;text-align:center}
-.suc p{font-size:0.9rem;color:var(--green);font-weight:500;line-height:1.7}
-.waf{position:fixed;bottom:2rem;right:2rem;z-index:300;background:#25D366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;animation:wflt 3s ease-in-out infinite;transition:transform 0.2s}.waf:hover{animation:none;transform:scale(1.1)}
-.wt{position:absolute;right:65px;background:var(--navy);color:#fff;font-size:0.75rem;padding:0.4rem 0.8rem;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s}.waf:hover .wt{opacity:1}
-@keyframes wflt{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-footer{background:var(--navy);padding:3rem 5%}
-.fi{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.fl{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#fff}.fl span{color:var(--teal3)}
-footer p{font-size:0.78rem;color:rgba(255,255,255,0.4)}
-.flinks{display:flex;gap:1.5rem;flex-wrap:wrap}.flinks a{font-size:0.78rem;color:rgba(255,255,255,0.4);text-decoration:none;cursor:pointer;transition:color 0.2s}.flinks a:hover{color:var(--teal3)}
-.rev{opacity:0;transform:translateY(24px);transition:all 0.6s ease}.rev.on{opacity:1;transform:translateY(0)}
-@media(max-width:900px){nav{padding:0.8rem 1.2rem}.nav-ul{display:none}.hero{padding:5.5rem 1.2rem 3rem}.hero-inner{grid-template-columns:1fr;gap:2.5rem}.hright{display:none}.tb-grid{grid-template-columns:1fr 1fr}.wrap{padding:4rem 1.2rem}.fg3{grid-template-columns:1fr}.demo-in{grid-template-columns:1fr;gap:3rem;padding:4rem 1.2rem}.spb{grid-template-columns:1fr}.cg{grid-template-columns:1fr;gap:2.5rem}.fr{grid-template-columns:1fr}.fi{flex-direction:column;text-align:center}}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;color:#000;background:#fff;overflow-x:hidden;line-height:1}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{border:none;font-family:inherit;cursor:pointer}
+
+/* ═══════════════════════════════════════════
+   CSS VARIABLES
+═══════════════════════════════════════════ */
+:root{
+  --white:#FFFFFF;
+  --bg2:#F7F7F7;
+  --black:#000000;
+  --t2:#5B6470;
+  --border:#ECECEC;
+  --blue:#2F80ED;
+  --blue-dk:#1a5fba;
+  --nav:68px;
+  --bar:44px;
+}
+
+/* ═══════════════════════════════════════════
+   ANNOUNCEMENT BAR
+═══════════════════════════════════════════ */
+.ann{
+  height:var(--bar);background:#000;
+  display:flex;align-items:center;justify-content:center;
+  gap:1.4rem;padding:0 1.2rem;flex-wrap:wrap;
+  position:relative;z-index:1100;
+}
+.ann-text{
+  font-family:'Montserrat',sans-serif;font-size:12px;
+  font-weight:600;letter-spacing:.05em;color:rgba(255,255,255,.85);
+  white-space:nowrap;
+}
+.ann-btn{
+  background:var(--blue);color:#fff;
+  padding:5px 18px;font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  white-space:nowrap;transition:background .2s;
+  font-family:'Montserrat',sans-serif;
+}
+.ann-btn:hover{background:var(--blue-dk)}
+
+/* ═══════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════ */
+nav{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--border);
+  height:var(--nav);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.nav-in{
+  max-width:1320px;margin:0 auto;padding:0 2rem;
+  height:100%;display:flex;align-items:center;justify-content:space-between;
+}
+.qv-logo{
+  font-family:'Montserrat',sans-serif;font-weight:900;
+  font-size:20px;letter-spacing:-.03em;color:#000;cursor:default;
+}
+.qv-logo sup{
+  font-size:9px;font-weight:700;color:var(--blue);
+  letter-spacing:.04em;vertical-align:super;margin-left:1px;
+}
+.nav-links{display:flex;align-items:center;gap:2.2rem}
+.nav-links a{
+  font-size:11.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:#333;transition:color .2s;
+}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{
+  background:#000;color:#fff;
+  padding:10px 24px;font-size:11px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  transition:background .2s;white-space:nowrap;
+  display:inline-block;
+}
+.nav-cta:hover{background:var(--blue)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.ham span{display:block;width:22px;height:1.5px;background:#000;transition:all .3s}
+.mob-nav{
+  display:none;position:fixed;
+  top:calc(var(--bar) + var(--nav));left:0;right:0;bottom:0;
+  background:#fff;z-index:999;padding:2rem;
+  border-top:1px solid var(--border);overflow-y:auto;
+}
+.mob-nav a{
+  display:block;font-size:17px;font-weight:700;
+  font-family:'Montserrat',sans-serif;
+  padding:1rem 0;border-bottom:1px solid #f2f2f2;color:#000;
+  transition:color .2s;
+}
+.mob-nav a:hover{color:var(--blue)}
+.mob-nav.open{display:block}
+
+/* ═══════════════════════════════════════════
+   HERO — FULL LIGHT MODE
+═══════════════════════════════════════════ */
+.hero{
+  background:#fff;
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:calc(100vh - var(--bar) - var(--nav));
+  align-items:stretch;overflow:hidden;
+}
+.hero-left{
+  padding:5.5rem 3.5rem 5.5rem 3.5rem;
+  display:flex;flex-direction:column;justify-content:center;
+  border-right:1px solid var(--border);
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:10.5px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:2rem;
+}
+.hero-eyebrow::before{
+  content:'';display:block;width:22px;height:1.5px;background:var(--blue);
+}
+.hero h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(2rem,3.8vw,3.4rem);
+  font-weight:900;line-height:1.06;
+  letter-spacing:-.035em;color:#000;margin-bottom:1.8rem;
+}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero-sub{
+  font-size:16px;line-height:1.78;color:var(--t2);
+  margin-bottom:2.8rem;max-width:490px;
+}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.btn-solid{
+  background:#000;color:#fff;
+  padding:14px 34px;font-size:12px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  transition:background .2s;display:inline-block;
+}
+.btn-solid:hover{background:var(--blue)}
+.btn-line{
+  border:1.5px solid #000;color:#000;
+  padding:13px 34px;font-size:12px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  transition:all .2s;display:inline-block;background:transparent;
+}
+.btn-line:hover{background:#000;color:#fff}
+.hero-kpis{
+  display:flex;gap:2.5rem;
+  padding-top:2.5rem;border-top:1px solid var(--border);
+  flex-wrap:wrap;
+}
+.kpi{display:flex;flex-direction:column;gap:3px}
+.kpi-n{
+  font-family:'Montserrat',sans-serif;
+  font-size:26px;font-weight:900;color:#000;letter-spacing:-.04em;line-height:1;
+}
+.kpi-l{
+  font-size:10px;color:var(--t2);
+  letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+}
+
+/* HERO RIGHT — light scientific visual */
+.hero-right{
+  position:relative;background:var(--bg2);
+  overflow:hidden;min-height:560px;
+}
+/* Subtle grid pattern on light bg */
+.hero-right::before{
+  content:'';position:absolute;inset:0;z-index:0;
+  background-image:
+    linear-gradient(var(--border) 1px,transparent 1px),
+    linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:48px 48px;
+  opacity:.6;
+}
+/* Science schematic SVG — always visible */
+.hero-schematic{
+  position:absolute;inset:0;z-index:1;
+  display:flex;align-items:center;justify-content:center;padding:3rem;
+}
+/* Real photo layered on top */
+.hero-photo{
+  position:absolute;inset:0;z-index:2;
+  width:100%;height:100%;object-fit:cover;
+}
+/* Subtle right-edge fade so photo blends */
+.hero-photo-fade{
+  position:absolute;inset:0;z-index:3;
+  background:linear-gradient(to right,rgba(247,247,247,.35) 0%,transparent 30%);
+  pointer-events:none;
+}
+/* Info badge — light style */
+.hero-badge{
+  position:absolute;bottom:2rem;left:2rem;right:2rem;z-index:4;
+  background:rgba(255,255,255,.92);
+  border:1px solid var(--border);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:1.2rem 1.6rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  flex-wrap:wrap;
+}
+.hb-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);margin-bottom:3px}
+.hb-val{font-family:'Montserrat',sans-serif;font-size:13.5px;font-weight:800;color:#000}
+.hb-status{display:flex;align-items:center;gap:7px}
+.hb-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 3px rgba(47,128,237,.18)}
+.hb-live{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+
+/* ═══════════════════════════════════════════
+   TRUST STRIP
+═══════════════════════════════════════════ */
+.trust{
+  background:var(--bg2);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:2.8rem 0;
+}
+.trust-lbl{
+  text-align:center;
+  font-size:10.5px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:#bbb;margin-bottom:2.2rem;
+}
+.logos-row{
+  display:flex;align-items:center;justify-content:center;
+  gap:3.5rem;flex-wrap:wrap;max-width:1100px;margin:0 auto;padding:0 2rem;
+}
+.logi{
+  font-family:'Montserrat',sans-serif;font-size:12.5px;
+  font-weight:800;color:#ccc;letter-spacing:.07em;
+  text-transform:uppercase;transition:color .3s;cursor:default;
+}
+.logi:hover{color:#888}
+
+/* ═══════════════════════════════════════════
+   SHARED SECTION UTILS
+═══════════════════════════════════════════ */
+.sec{padding:6rem 0}
+.wrap{max-width:1320px;margin:0 auto;padding:0 2rem}
+.tag{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:10.5px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:1rem;
+}
+.tag::before{content:'';display:block;width:16px;height:1.5px;background:var(--blue)}
+.sec-h{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(1.75rem,2.8vw,2.6rem);
+  font-weight:800;letter-spacing:-.028em;line-height:1.1;margin-bottom:1rem;
+}
+.sec-p{font-size:15.5px;color:var(--t2);line-height:1.78;max-width:580px}
+
+/* ═══════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════ */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img-wrap{position:relative}
+.about-img{
+  width:100%;height:500px;object-fit:cover;
+  background:linear-gradient(135deg,#e8e8e8,#d0d0d0);
+}
+.about-stamp{
+  position:absolute;bottom:-1.5rem;right:0;
+  background:#000;color:#fff;padding:1.4rem 2rem;
+}
+.about-stamp .n{
+  font-family:'Montserrat',sans-serif;font-size:36px;
+  font-weight:900;display:block;letter-spacing:-.04em;line-height:1;
+}
+.about-stamp .l{
+  font-size:9.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;opacity:.5;margin-top:5px;display:block;
+}
+.about-body p{
+  font-size:15.5px;line-height:1.8;color:var(--t2);margin-bottom:1.1rem;
+}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
+.pill{
+  background:var(--bg2);padding:1.3rem;
+  border-left:2.5px solid var(--blue);
+}
+.pill h4{
+  font-family:'Montserrat',sans-serif;font-size:11.5px;
+  font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px;
+}
+.pill p{font-size:12px;color:var(--t2);line-height:1.5}
+
+/* ═══════════════════════════════════════════
+   MISSION — LIGHT VERSION
+═══════════════════════════════════════════ */
+.mission{
+  background:var(--bg2);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:7rem 2rem;text-align:center;
+}
+.mission-line{
+  display:flex;align-items:center;justify-content:center;gap:1.5rem;
+  margin-bottom:2.5rem;
+}
+.mission-line::before,.mission-line::after{
+  content:'';flex:1;max-width:80px;height:1px;background:var(--border);
+}
+.mission-icon{
+  width:36px;height:36px;border:1px solid var(--blue);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.mission-q{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(1.4rem,3vw,2.3rem);
+  font-weight:800;line-height:1.32;
+  max-width:820px;margin:0 auto;
+  letter-spacing:-.025em;color:#000;
+}
+.mission-q em{font-style:normal;color:var(--blue)}
+.mission-foot{
+  margin-top:2.5rem;font-size:11px;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:#bbb;
+}
+
+/* ═══════════════════════════════════════════
+   TECH / PRODUCTS
+═══════════════════════════════════════════ */
+.tech-sec{background:var(--bg2)}
+.tech-head{text-align:center;margin-bottom:3.5rem}
+.tech-head .tag{justify-content:center}
+.tech-head .sec-p{margin:0 auto;text-align:center}
+.tech-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  background:var(--border);gap:1px;
+  border:1px solid var(--border);
+}
+.t-card{
+  background:#fff;display:flex;flex-direction:column;
+  transition:box-shadow .3s;position:relative;
+}
+.t-card:hover{box-shadow:0 4px 30px rgba(0,0,0,.09);z-index:2}
+.t-img-wrap{height:210px;overflow:hidden;background:#e8e8e8;position:relative}
+.t-img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.t-card:hover .t-img{transform:scale(1.05)}
+/* Light overlay on product card images */
+.t-img-wrap::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 60%,rgba(0,0,0,.06));
+  pointer-events:none;
+}
+.t-body{padding:1.8rem;flex:1;display:flex;flex-direction:column}
+.t-cat{
+  font-size:9.5px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:.7rem;
+}
+.t-body h3{
+  font-family:'Montserrat',sans-serif;font-size:15px;
+  font-weight:800;line-height:1.3;margin-bottom:.8rem;
+}
+.t-body p{font-size:13px;color:var(--t2);line-height:1.65;flex:1;margin-bottom:1.5rem}
+.t-link{
+  font-size:11px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:#000;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:gap .25s,color .25s;
+}
+.t-link::after{content:'→';color:var(--blue)}
+.t-link:hover{gap:10px;color:var(--blue)}
+
+/* ═══════════════════════════════════════════
+   WHY CHOOSE — LIGHT
+═══════════════════════════════════════════ */
+.why-sec{background:#fff}
+.why-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  background:var(--border);gap:1px;border:1px solid var(--border);
+  margin-top:3.5rem;
+}
+.w-card{background:#fff;padding:2.5rem;transition:background .25s}
+.w-card:hover{background:var(--bg2)}
+.w-ico{margin-bottom:1.5rem}
+.w-ico svg{width:34px;height:34px}
+.w-card h3{
+  font-family:'Montserrat',sans-serif;font-size:14px;
+  font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em;
+}
+.w-card p{font-size:13px;color:var(--t2);line-height:1.65}
+
+/* ═══════════════════════════════════════════
+   INDUSTRIES
+═══════════════════════════════════════════ */
+.ind-sec{background:var(--bg2)}
+.ind-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;background:var(--border);margin-top:3.5rem;
+}
+.i-card{position:relative;height:270px;overflow:hidden;background:#ccc}
+.i-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s;opacity:.9}
+.i-card:hover img{transform:scale(1.07);opacity:1}
+.i-over{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.04) 60%);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:1.7rem;
+}
+.i-num{font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.4rem}
+.i-over h3{font-family:'Montserrat',sans-serif;font-size:16.5px;font-weight:800;color:#fff;letter-spacing:-.01em}
+
+/* ═══════════════════════════════════════════
+   R&D / INNOVATION
+═══════════════════════════════════════════ */
+.rnd-sec{background:#fff}
+.rnd-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.rnd-img{width:100%;height:500px;object-fit:cover;background:#e0e0e0}
+.rnd-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.rs{border:1px solid var(--border);padding:1.6rem;background:#fff;transition:border-color .2s}
+.rs:hover{border-color:var(--blue)}
+.rs-n{
+  font-family:'Montserrat',sans-serif;font-size:32px;
+  font-weight:900;color:#000;letter-spacing:-.04em;display:block;line-height:1;
+}
+.rs-l{
+  font-size:10.5px;color:var(--t2);letter-spacing:.09em;
+  text-transform:uppercase;font-weight:600;display:block;margin-top:6px;
+}
+
+/* ═══════════════════════════════════════════
+   CONTACT — LIGHT MODE
+═══════════════════════════════════════════ */
+.contact-sec{background:var(--bg2);border-top:1px solid var(--border)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.c-info .sec-h em{font-style:normal;color:var(--blue)}
+.c-info .sec-p{max-width:100%}
+.c-details{margin:2rem 0;display:flex;flex-direction:column;gap:.8rem}
+.c-row{display:flex;gap:.8rem;align-items:baseline}
+.c-row .lbl{
+  font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:#bbb;width:55px;flex-shrink:0;
+}
+.c-row a,.c-row span{font-size:14px;color:#333;transition:color .2s}
+.c-row a:hover{color:var(--blue)}
+.c-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.c-badge{
+  border:1px solid var(--border);color:var(--t2);
+  padding:5px 14px;font-size:11.5px;letter-spacing:.04em;background:#fff;
+}
+/* LIGHT FORM */
+.lform{display:flex;flex-direction:column;gap:.9rem}
+.lform-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.linput{
+  background:#fff;border:1px solid var(--border);color:#000;
+  padding:14px 16px;font-size:14px;font-family:'Inter',sans-serif;
+  outline:none;width:100%;transition:border .25s;
+}
+.linput::placeholder{color:#bbb}
+.linput:focus{border-color:var(--blue)}
+textarea.linput{resize:vertical;min-height:130px}
+select.linput{cursor:pointer}
+.lform-btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.lbtn-blue{
+  background:var(--blue);color:#fff;
+  padding:14px 32px;font-size:12px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:background .2s;
+}
+.lbtn-blue:hover{background:var(--blue-dk)}
+.lbtn-blk{
+  background:#000;color:#fff;
+  padding:13px 32px;font-size:12px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:background .2s;
+}
+.lbtn-blk:hover{background:#333}
+.fmsg{font-size:13px;padding:12px 14px;margin-top:.5rem;display:none}
+.fmsg.ok{background:rgba(47,128,237,.08);color:var(--blue);border:1px solid rgba(47,128,237,.25);display:block}
+.fmsg.err{background:rgba(220,50,50,.08);color:#c0392b;border:1px solid rgba(220,50,50,.25);display:block}
+
+/* ═══════════════════════════════════════════
+   DOMAIN INQUIRY — LIGHT
+═══════════════════════════════════════════ */
+.domain-sec{background:#fff;border-top:1px solid var(--border)}
+.domain-inner{max-width:800px;margin:0 auto;text-align:center}
+.domain-inner .sec-p{margin:0 auto 2.8rem;text-align:center}
+.domain-inner .tag{justify-content:center}
+.domain-box{
+  background:var(--bg2);border:1px solid var(--border);
+  padding:2.5rem;margin-bottom:2.5rem;text-align:left;
+}
+.domain-box p{font-size:14px;color:var(--t2);line-height:1.7}
+.dform{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;text-align:left}
+.dfull{grid-column:1/-1}
+.dbtn{
+  background:#000;color:#fff;padding:15px;width:100%;
+  font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s;
+}
+.dbtn:hover{background:var(--blue)}
+
+/* ═══════════════════════════════════════════
+   FOOTER — LIGHT
+═══════════════════════════════════════════ */
+footer{background:#fff;border-top:1px solid var(--border);padding:4rem 0 0}
+.foot-grid{
+  display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;
+  gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border);
+}
+.f-brand .qv-logo{font-size:18px;margin-bottom:1rem;display:block}
+.f-brand p{font-size:13px;color:var(--t2);line-height:1.7;max-width:240px}
+.f-socials{display:flex;gap:.6rem;margin-top:1.5rem}
+.f-soc{
+  width:34px;height:34px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;color:var(--t2);
+  font-family:'Montserrat',sans-serif;transition:all .2s;
+}
+.f-soc:hover{border-color:#000;color:#000}
+.f-col h4{
+  font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#000;margin-bottom:1.2rem;font-family:'Montserrat',sans-serif;
+}
+.f-col a{
+  display:block;font-size:13px;color:var(--t2);
+  margin-bottom:.55rem;transition:color .2s;
+}
+.f-col a:hover{color:#000}
+.foot-tagline{
+  text-align:center;padding:1.5rem 0;
+  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#bbb;
+  border-bottom:1px solid var(--border);
+}
+.foot-bottom{
+  padding:1.2rem 0;display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+  font-size:11.5px;color:#bbb;
+}
+.foot-bottom a{color:var(--blue)}
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════ */
+[data-r]{
+  opacity:0;transform:translateY(26px);
+  transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1);
+}
+[data-r].on{opacity:1;transform:none}
+[data-r][data-d="1"]{transition-delay:.1s}
+[data-r][data-d="2"]{transition-delay:.2s}
+[data-r][data-d="3"]{transition-delay:.3s}
+[data-r][data-d="4"]{transition-delay:.4s}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media(max-width:1100px){
+  .hero{grid-template-columns:1fr}
+  .hero-right{min-height:380px}
+  .tech-grid{grid-template-columns:1fr 1fr}
+  .about-grid,.rnd-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .ham{display:flex}
+  .hero-left{padding:2.5rem 1.5rem}
+  .hero-right{min-height:280px}
+  .tech-grid,.why-grid,.ind-grid{grid-template-columns:1fr}
+  .lform-row,.dform,.pillars,.rnd-stats{grid-template-columns:1fr}
+  .rnd-stats{grid-template-columns:1fr 1fr}
+  .hero-kpis{gap:1.5rem}
+  .foot-grid{grid-template-columns:1fr}
+  .logos-row{gap:1.8rem}
+}
 </style>
 </head>
 <body>
-<div class="waf" onclick="openWA()"><span class="wt">WhatsApp Us</span><svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
-<nav><a class="logo" href="#">Quark<span>volt</span></a><ul class="nav-ul"><li><a onclick="go('feat')">Features</a></li><li><a onclick="go('chat')">AI Chat</a></li><li><a onclick="go('sale')" style="color:#F59E0B;font-weight:600">🏷️ For Sale</a></li><li><a onclick="go('contact')">Contact</a></li></ul><button class="nav-cta" onclick="go('sale')">🏷️ Buy Domain</button></nav>
 
-<section class="hero"><div class="orb1"></div><div class="orb2"></div>
-<div class="hero-inner">
-<div><div class="badge"><span class="bd"></span>Quantum Energy AI Platform</div>
-<h1>Power Smarter.<br><em>Save 40%</em> on Energy.</h1>
-<p class="hsub">AI-powered quantum energy management for factories, industries, and enterprises. Cut electricity costs by up to 40% — starting today.</p>
-<div class="hbtns"><button class="btn-p" onclick="go('chat')">⚡ Try Free AI Demo</button><button class="btn-s" onclick="go('feat')">See Features</button></div>
-<div class="tpills"><div class="tp">⚡ Real-Time Monitoring</div><div class="tp">🤖 Quantum AI</div><div class="tp">📊 Live Dashboard</div><div class="tp">🌍 Global Standard</div></div></div>
-<div class="hright">
-<div class="sc ft"><div class="sc-top"><div class="sc-ic">⚡</div><span class="sc-bg">LIVE</span></div><div class="sc-n">40%</div><div class="sc-l">Average energy cost reduction</div></div>
-<div class="sc-row"><div class="sc"><div class="sc-top"><div class="sc-ic">📊</div></div><div class="sc-n">24/7</div><div class="sc-l">Live monitoring</div></div><div class="sc"><div class="sc-top"><div class="sc-ic">💰</div></div><div class="sc-n">10x</div><div class="sc-l">ROI in 12 months</div></div></div>
-<div class="sc"><div class="sc-top"><div class="sc-ic">🌍</div><span class="sc-bg">MARKET</span></div><div class="sc-n">$800B</div><div class="sc-l">Energy Tech market by 2030</div></div>
-</div></div></section>
+<!-- ═══ ANNOUNCEMENT BAR ═══ -->
+<div class="ann">
+  <span class="ann-text">QuarkVolt.com — Premium Energy &amp; Battery Technology Domain Available for Acquisition</span>
+  <a href="#domain" class="ann-btn">Contact for Purchase</a>
+</div>
 
-<div class="tbar"><div class="tb-in"><div class="tb-lbl">Trusted by industrial clients worldwide</div><div class="tb-grid"><div class="tb-it"><span class="tb-n">40%</span><span class="tb-l">Energy Savings</span></div><div class="tb-it"><span class="tb-n">$800B</span><span class="tb-l">Market Size 2030</span></div><div class="tb-it"><span class="tb-n">48hr</span><span class="tb-l">Setup to Savings</span></div><div class="tb-it"><span class="tb-n">99%</span><span class="tb-l">Uptime Guarantee</span></div></div></div></div>
+<!-- ═══ NAVBAR ═══ -->
+<nav>
+  <div class="nav-in">
+    <div class="qv-logo">QuarkVolt<sup>™</sup></div>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#tech">Technology</a>
+      <a href="#products">Products</a>
+      <a href="#rnd">Innovation</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Request Partnership</a>
+    <div class="ham" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="#hero" onclick="toggleNav()">Home</a>
+  <a href="#about" onclick="toggleNav()">About</a>
+  <a href="#tech" onclick="toggleNav()">Technology</a>
+  <a href="#products" onclick="toggleNav()">Products</a>
+  <a href="#rnd" onclick="toggleNav()">Innovation</a>
+  <a href="#contact" onclick="toggleNav()">Contact</a>
+  <a href="#domain" onclick="toggleNav()" style="color:var(--blue)">Domain Inquiry</a>
+</div>
 
-<div class="wrap rev" id="feat"><div class="stag">Platform Features</div><h2>Intelligent Energy,<br><em>Reimagined</em></h2><p style="font-size:0.95rem;color:var(--muted);line-height:1.8;max-width:500px;margin-bottom:3rem">Quarkvolt combines quantum computing principles with AI to deliver unprecedented energy efficiency for industry and enterprise.</p>
-<div class="fg3"><div class="fc"><div class="fc-ic">⚡</div><h3>Quantum Load Balancing</h3><p>AI redistributes electrical loads in real time — eliminating waste and reducing peak demand charges automatically.</p></div><div class="fc"><div class="fc-ic">🔮</div><h3>72-Hour Prediction</h3><p>Machine learning forecasts your energy needs 72 hours ahead, enabling proactive optimization before costs spike.</p></div><div class="fc"><div class="fc-ic">📊</div><h3>Live Dashboard</h3><p>Monitor every watt across every machine, floor, and facility from a single intelligent control center.</p></div><div class="fc"><div class="fc-ic">🌿</div><h3>Carbon Tracking</h3><p>Automatically calculate and report ESG metrics for compliance, investor reporting, and sustainability certification.</p></div><div class="fc"><div class="fc-ic">🔗</div><h3>ERP Integration</h3><p>Connect directly to SAP, Oracle, or any enterprise system — zero operational disruption guaranteed.</p></div><div class="fc"><div class="fc-ic">🛡️</div><h3>Smart Grid Ready</h3><p>Seamlessly connect with national grid, solar panels, and battery storage for an optimized energy ecosystem.</p></div></div></div>
+<!-- ═══ HERO ═══ -->
+<section id="hero" class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Advanced Energy Technology</div>
+    <h1>Powering the Next Era of <em>Advanced Energy</em> Technology</h1>
+    <p class="hero-sub">QuarkVolt develops lithium battery systems, EV charging infrastructure, smart grid platforms, and industrial energy storage solutions for future global demand.</p>
+    <div class="hero-btns">
+      <a href="#tech" class="btn-solid">Explore Technology</a>
+      <a href="#contact" class="btn-line">Request Partnership</a>
+    </div>
+    <div class="hero-kpis">
+      <div class="kpi"><span class="kpi-n">500+</span><span class="kpi-l">Energy Projects</span></div>
+      <div class="kpi"><span class="kpi-n">40+</span><span class="kpi-l">Countries</span></div>
+      <div class="kpi"><span class="kpi-n">99%</span><span class="kpi-l">Reliability</span></div>
+      <div class="kpi"><span class="kpi-n">15 Yrs</span><span class="kpi-l">Innovation</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- Grid background always visible -->
+    <!-- Scientific schematic SVG — light version -->
+    <div class="hero-schematic">
+      <svg viewBox="0 0 540 460" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:88%;opacity:.18">
+        <!-- Battery cell array -->
+        <rect x="40" y="60" width="50" height="100" rx="3" stroke="#2F80ED" stroke-width="1.5"/>
+        <rect x="100" y="60" width="50" height="100" rx="3" stroke="#2F80ED" stroke-width="1.5"/>
+        <rect x="160" y="60" width="50" height="100" rx="3" stroke="#2F80ED" stroke-width="1.5"/>
+        <rect x="50" y="78" width="30" height="6" rx="1" fill="#2F80ED" opacity=".4"/>
+        <rect x="50" y="90" width="30" height="6" rx="1" fill="#2F80ED" opacity=".4"/>
+        <rect x="50" y="102" width="30" height="6" rx="1" fill="#2F80ED" opacity=".3"/>
+        <rect x="50" y="114" width="30" height="6" rx="1" fill="#2F80ED" opacity=".2"/>
+        <rect x="110" y="78" width="30" height="6" rx="1" fill="#2F80ED" opacity=".5"/>
+        <rect x="110" y="90" width="30" height="6" rx="1" fill="#2F80ED" opacity=".4"/>
+        <rect x="110" y="102" width="30" height="6" rx="1" fill="#2F80ED" opacity=".3"/>
+        <rect x="170" y="78" width="30" height="6" rx="1" fill="#2F80ED" opacity=".3"/>
+        <rect x="170" y="90" width="30" height="6" rx="1" fill="#2F80ED" opacity=".4"/>
+        <!-- BMS controller -->
+        <rect x="40" y="185" width="170" height="50" rx="3" stroke="#000" stroke-width="1.2"/>
+        <text x="125" y="215" font-family="Montserrat" font-size="9" fill="#000" text-anchor="middle" font-weight="700">BATTERY MANAGEMENT SYSTEM</text>
+        <!-- Connection lines -->
+        <line x1="65" y1="160" x2="65" y2="185" stroke="#2F80ED" stroke-width="1"/>
+        <line x1="125" y1="160" x2="125" y2="185" stroke="#2F80ED" stroke-width="1"/>
+        <line x1="185" y1="160" x2="185" y2="185" stroke="#2F80ED" stroke-width="1"/>
+        <!-- Power grid -->
+        <rect x="290" y="60" width="210" height="150" rx="4" stroke="#000" stroke-width="1.5"/>
+        <text x="395" y="85" font-family="Montserrat" font-size="9" fill="#000" text-anchor="middle" font-weight="700">SMART GRID CONTROLLER</text>
+        <line x1="310" y1="100" x2="480" y2="100" stroke="#ECECEC" stroke-width="1"/>
+        <rect x="310" y="110" width="60" height="40" rx="2" stroke="#2F80ED" stroke-width="1.2"/>
+        <rect x="385" y="110" width="60" height="40" rx="2" stroke="#2F80ED" stroke-width="1.2"/>
+        <rect x="460" y="110" width="20" height="40" rx="1" stroke="#000" stroke-width=".8"/>
+        <rect x="310" y="165" width="40" height="28" rx="2" stroke="#000" stroke-width=".8"/>
+        <rect x="360" y="165" width="40" height="28" rx="2" stroke="#000" stroke-width=".8"/>
+        <rect x="410" y="165" width="40" height="28" rx="2" stroke="#000" stroke-width=".8"/>
+        <!-- EV Charger -->
+        <rect x="290" y="240" width="80" height="140" rx="3" stroke="#000" stroke-width="1.5"/>
+        <rect x="305" y="260" width="50" height="35" rx="2" stroke="#2F80ED" stroke-width="1.2"/>
+        <circle cx="330" cy="330" r="14" stroke="#000" stroke-width="1.2"/>
+        <circle cx="330" cy="330" r="6" fill="#2F80ED" opacity=".3"/>
+        <line x1="330" y1="380" x2="330" y2="395" stroke="#2F80ED" stroke-width="2"/>
+        <!-- Solar panel array -->
+        <rect x="390" y="250" width="110" height="70" rx="2" stroke="#000" stroke-width="1.2"/>
+        <line x1="390" y1="270" x2="500" y2="270" stroke="#000" stroke-width=".6"/>
+        <line x1="390" y1="290" x2="500" y2="290" stroke="#000" stroke-width=".6"/>
+        <line x1="390" y1="310" x2="500" y2="310" stroke="#000" stroke-width=".6"/>
+        <line x1="427" y1="250" x2="427" y2="320" stroke="#000" stroke-width=".6"/>
+        <line x1="463" y1="250" x2="463" y2="320" stroke="#000" stroke-width=".6"/>
+        <!-- Connecting wiring -->
+        <path d="M210 210 H250 V150 H290" stroke="#2F80ED" stroke-width="1" stroke-dasharray="5 4"/>
+        <path d="M370 210 V240" stroke="#000" stroke-width="1" stroke-dasharray="5 4"/>
+        <path d="M445 210 V250" stroke="#000" stroke-width="1" stroke-dasharray="5 4"/>
+        <!-- Data point dots -->
+        <circle cx="250" cy="150" r="4" fill="#2F80ED"/>
+        <circle cx="370" cy="240" r="4" fill="#000" opacity=".4"/>
+        <circle cx="445" cy="250" r="4" fill="#000" opacity=".4"/>
+      </svg>
+    </div>
+    <!-- Photo -->
+    <img class="hero-photo"
+      src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=1000&q=90&fit=crop&crop=center"
+      alt="Advanced Battery Technology"
+      onerror="this.style.display='none'"
+    >
+    <div class="hero-photo-fade"></div>
+    <div class="hero-badge">
+      <div>
+        <div class="hb-label">Active Platform</div>
+        <div class="hb-val">QuarkVolt LiNMC — 450Wh/kg Energy Density System</div>
+      </div>
+      <div class="hb-status">
+        <div class="hb-dot"></div>
+        <span class="hb-live">In Production</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="demo-bg"><div class="demo-in"><div class="rev"><div class="stag">Live Demo</div><h2>See Your Savings<br><em>In Real Time</em></h2><p style="font-size:0.92rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem">This is what your Quarkvolt dashboard looks like — live energy data, savings tracking, and AI recommendations.</p><div style="display:flex;flex-direction:column;gap:0.8rem"><div style="display:flex;align-items:center;gap:0.8rem;font-size:0.85rem;color:var(--muted)"><span style="width:28px;height:28px;background:var(--teal-light);border-radius:8px;display:flex;align-items:center;justify-content:center">✓</span>No hardware replacement needed</div><div style="display:flex;align-items:center;gap:0.8rem;font-size:0.85rem;color:var(--muted)"><span style="width:28px;height:28px;background:var(--teal-light);border-radius:8px;display:flex;align-items:center;justify-content:center">✓</span>Works with existing equipment</div><div style="display:flex;align-items:center;gap:0.8rem;font-size:0.85rem;color:var(--muted)"><span style="width:28px;height:28px;background:var(--teal-light);border-radius:8px;display:flex;align-items:center;justify-content:center">✓</span>Pays for itself in 3 months</div></div></div>
-<div class="dash rev" style="transition-delay:0.2s"><div class="dash-hd"><span class="dash-title">Quarkvolt Live Dashboard</span><div class="dash-live"><div class="ld"></div>Live</div></div><div class="dash-bd"><div class="dstat"><div><div class="ds-lbl">Current Power Usage</div><div style="font-size:0.7rem;color:var(--muted2)">Factory Floor A</div></div><div style="text-align:right"><div class="ds-val">284 kW</div><div class="ds-chg">↓ 38% vs last month</div></div></div><div class="dstat"><div><div class="ds-lbl">Monthly Savings</div><div style="font-size:0.7rem;color:var(--muted2)">This Month</div></div><div style="text-align:right"><div class="ds-val">Rs. 2.4L</div><div class="ds-chg">↑ On Track</div></div></div><div class="dbar"><div class="dbar-top"><span>Peak Load Optimization</span><span class="dbar-val">76%</span></div><div class="bar-track"><div class="bar-fill" style="width:76%"></div></div></div><div class="dbar"><div class="dbar-top"><span>Carbon Reduction</span><span class="dbar-val">61%</span></div><div class="bar-track"><div class="bar-fill" style="width:61%"></div></div></div><div class="dbar"><div class="dbar-top"><span>Grid Stability</span><span class="dbar-val">94%</span></div><div class="bar-track"><div class="bar-fill" style="width:94%"></div></div></div></div></div></div></div>
+<!-- ═══ TRUST ═══ -->
+<div class="trust">
+  <div class="trust-lbl">Referenced &amp; Trusted Across Global Energy Markets</div>
+  <div class="logos-row">
+    <span class="logi">Siemens</span>
+    <span class="logi">ABB</span>
+    <span class="logi">Schneider</span>
+    <span class="logi">CATL</span>
+    <span class="logi">Panasonic</span>
+    <span class="logi">Hitachi</span>
+    <span class="logi">Fluence</span>
+    <span class="logi">Nidec</span>
+  </div>
+</div>
 
-<div class="cs" id="chat"><div class="wrap"><div style="text-align:center;margin-bottom:2.5rem" class="rev"><div class="stag">AI Energy Assistant</div><h2>Ask Our <em>AI Expert</em></h2><p style="color:var(--muted);font-size:0.95rem;max-width:480px;margin:0 auto">Ask anything about energy savings. Upload your electricity bill for instant analysis!</p></div>
-<div class="cw rev"><div class="chatbot"><div class="bh"><div class="bav">⚡</div><div class="bi"><h4>Quarkvolt AI</h4><p>Quantum Energy Intelligence Expert</p></div><div class="bst"><div class="sdot"></div>Online</div></div>
-<div class="bmsgs" id="botMsgs"><div class="bm bot"><div class="bmav b">⚡</div><div class="bb"><b>Hello! I'm Quarkvolt AI</b> — your quantum energy expert. 🌱<br><br>I can help you:<br>• Calculate potential energy savings<br>• Analyze your electricity bill (upload it!)<br>• Explain quantum AI energy optimization<br>• Answer technical questions<br><br><b>What would you like to know?</b></div></div></div>
-<div class="qrs" id="qrs"><button class="qr" onclick="qs('How much can I save on electricity?')">💰 Energy Savings</button><button class="qr" onclick="qs('How does quantum AI work for energy?')">🔮 How It Works</button><button class="qr" onclick="qs('Analyze my electricity bill')">📄 Bill Analysis</button><button class="qr" onclick="qs('What industries do you serve?')">🏭 Industries</button></div>
-<div class="bia"><div class="upr" id="upPrev"><span>📎</span><span id="upNm"></span><button class="urm" onclick="rmUp()">✕</button></div><div class="ir"><div class="ubtn" onclick="document.getElementById('fi').click()" title="Upload electricity bill">📎</div><input type="file" id="fi" accept="image/*,.pdf" style="display:none" onchange="hFile(this)"><textarea class="binp" id="botInp" placeholder="Ask about energy savings, costs, or how Quarkvolt works..." rows="1" onkeypress="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();snd()}"></textarea><button class="bsnd" id="botSend" onclick="snd()">➤</button></div><div class="inote">🔒 Private • Upload electricity bill for instant savings analysis</div></div></div></div></div></div>
+<!-- ═══ ABOUT ═══ -->
+<section id="about" class="sec about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap" data-r>
+        <img class="about-img"
+          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=90&fit=crop"
+          alt="QuarkVolt Engineers"
+          onerror="this.style.background='#e0e0e0'"
+        >
+        <div class="about-stamp">
+          <span class="n">2009</span>
+          <span class="l">Established</span>
+        </div>
+      </div>
+      <div class="about-body" data-r data-d="2">
+        <div class="tag">About QuarkVolt</div>
+        <h2 class="sec-h">Engineering the Science of Advanced Energy Storage</h2>
+        <p>QuarkVolt is a deep-tech energy company developing next-generation lithium battery systems, EV charging infrastructure, and smart grid solutions. Our work spans from fundamental materials science to utility-scale industrial deployment across six continents.</p>
+        <p>Founded by electrochemists and power engineers, QuarkVolt brings rigorous scientific methodology to every system we build — from 450Wh/kg cell chemistries to AI-driven grid management platforms serving national utilities.</p>
+        <p>With ISO 9001, IEC 62133, UL 9540, and UN 38.3 certifications across our product lines, QuarkVolt systems meet the strictest international standards for energy safety and performance.</p>
+        <div class="pillars">
+          <div class="pill"><h4>Battery R&amp;D</h4><p>In-house electrochemistry labs with 80+ PhDs</p></div>
+          <div class="pill"><h4>Certifications</h4><p>IEC, UL, CE, UN 38.3, RoHS — all platforms</p></div>
+          <div class="pill"><h4>Manufacturing</h4><p>GWh-scale facilities, zero-defect quality system</p></div>
+          <div class="pill"><h4>Global Reach</h4><p>Deployed in 40+ countries, 5 continents</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="sale" id="sale"><div class="sale-orb"></div><div class="si">
-<div class="stag-gold"><span class="sgd"></span>Premium Domain For Sale</div>
-<h2>Own <em>Quarkvolt.com</em><br>— Build the Future</h2>
-<p>This premium domain is perfectly positioned for the booming $800B quantum energy and clean tech market. Complete website included. First mover advantage is everything in tech.</p>
-<div class="spb"><div class="spbi"><div class="spbi-l">Asking Price</div><div class="spbi-v">$30,000</div><div class="spbi-n">Or best offer</div></div><div class="spbi"><div class="spbi-l">Market Size</div><div class="spbi-v">$800B</div><div class="spbi-n">Energy Tech by 2030</div></div><div class="spbi"><div class="spbi-l">Included</div><div class="spbi-v">Website</div><div class="spbi-n">Full site + AI chatbot</div></div></div>
-<div class="sfeats"><div class="sf">✅ Premium .com</div><div class="sf">✅ Full Website Included</div><div class="sf">✅ Instant Transfer</div><div class="sf">✅ No Trademark Issues</div><div class="sf">✅ Escrow Available</div></div>
-<div class="sbtns"><button class="btn-buy" onclick="go('contact')">💰 Make an Offer</button><button class="btn-off" onclick="openWA()">💬 WhatsApp to Negotiate</button></div>
-</div></div>
+<!-- ═══ MISSION — LIGHT ═══ -->
+<div class="mission">
+  <div class="mission-line">
+    <div class="mission-icon">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="3" fill="#2F80ED"/>
+        <circle cx="8" cy="8" r="7" stroke="#2F80ED" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+  <p class="mission-q" data-r>
+    Accelerating the future of advanced energy through <em>scientific innovation</em>, intelligent storage, and industrial engineering built for the demands of tomorrow.
+  </p>
+  <div class="mission-foot" data-r data-d="2">QuarkVolt Global — Est. 2009 — 40+ Countries — 500+ Projects Delivered</div>
+</div>
 
-<div style="background:var(--off);border-top:1px solid var(--border)" id="contact"><div class="wrap rev"><div class="cg">
-<div><div class="stag">Get In Touch</div><h2>Interested in<br><em>Quarkvolt?</em></h2><p style="color:var(--muted);font-size:0.92rem;line-height:1.8;margin-bottom:2rem">Buying the domain, using the platform, or exploring partnership — fill the form and we'll respond within 24 hours.</p>
-<div class="tsigs"><div class="ts"><div class="ts-ic">🔒</div><div class="ts-tx"><h5>100% Private</h5><p>Your info is never shared publicly</p></div></div><div class="ts"><div class="ts-ic">⚡</div><div class="ts-tx"><h5>24 Hour Response</h5><p>We respond personally via WhatsApp</p></div></div><div class="ts"><div class="ts-ic">🤝</div><div class="ts-tx"><h5>Escrow Available</h5><p>Safe domain transfer guaranteed</p></div></div><div class="ts"><div class="ts-ic">💰</div><div class="ts-tx"><h5>Price Negotiable</h5><p>Make us a reasonable offer</p></div></div></div></div>
-<div><div class="cf"><div class="cf-t">Send a Message</div><div class="cf-s">Domain purchase, platform inquiry, or partnership</div>
-<div id="sucBox" class="suc"><p>✅ Message received! We'll contact you within 24 hours. 🎉</p></div>
-<form class="fw" id="mf" onsubmit="sub(event)"><div class="fr"><div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your name" required></div><div class="fg"><label>WhatsApp *</label><input type="tel" name="phone" placeholder="Your number" required></div></div><div class="fg"><label>Email *</label><input type="email" name="email" placeholder="your@email.com" required></div><div class="fg"><label>I'm Interested In</label><select name="service"><option value="buy">Buying Quarkvolt.com Domain</option><option value="platform">Using the Energy Platform</option><option value="partner">Partnership / Investment</option><option value="other">Other Inquiry</option></select></div><div class="fg"><label>Message</label><textarea name="message" placeholder="Your offer or inquiry..."></textarea></div><button type="submit" class="bsub" id="sb">Send Message →</button><p class="fnote">🔒 Private & secure. No spam ever.</p></form></div></div>
-</div></div></div>
+<!-- ═══ TECHNOLOGY & PRODUCTS ═══ -->
+<section id="tech" class="sec tech-sec">
+  <div class="wrap">
+    <div class="tech-head" data-r>
+      <div class="tag">Technology Portfolio</div>
+      <h2 class="sec-h">Precision-Engineered Energy Systems</h2>
+      <p class="sec-p">From cell-level battery innovation to grid-scale energy management — every system is engineered for performance at industrial scale.</p>
+    </div>
+    <div class="tech-grid" id="products">
+      <div class="t-card" data-r>
+        <div class="t-img-wrap">
+          <img class="t-img"
+            src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=600&q=85&fit=crop"
+            alt="Battery Systems"
+            onerror="this.parentElement.style.background='#ddd'"
+          >
+        </div>
+        <div class="t-body">
+          <div class="t-cat">Lithium Battery Systems</div>
+          <h3>QuarkCell — High-Density LiNMC &amp; LFP Platforms</h3>
+          <p>450Wh/kg energy density. NMC 811 and LFP chemistries. Modular 50kWh–10MWh configurations with integrated thermal management.</p>
+          <a href="#contact" class="t-link">Learn More</a>
+        </div>
+      </div>
+      <div class="t-card" data-r data-d="1">
+        <div class="t-img-wrap">
+          <img class="t-img"
+            src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=85&fit=crop"
+            alt="EV Charging"
+            onerror="this.parentElement.style.background='#ddd'"
+          >
+        </div>
+        <div class="t-body">
+          <div class="t-cat">EV Charging Technology</div>
+          <h3>QuarkCharge — DC Ultra-Fast Charging Infrastructure</h3>
+          <p>CCS, CHAdeMO, and GB/T compatible. 22kW AC to 400kW DC. V2G enabled with OCPP 2.0 cloud management and demand response.</p>
+          <a href="#contact" class="t-link">Learn More</a>
+        </div>
+      </div>
+      <div class="t-card" data-r data-d="2">
+        <div class="t-img-wrap">
+          <img class="t-img"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85&fit=crop"
+            alt="Smart Grid"
+            onerror="this.parentElement.style.background='#ddd'"
+          >
+        </div>
+        <div class="t-body">
+          <div class="t-cat">Smart Grid Solutions</div>
+          <h3>QuarkGrid — AI-Driven Power Distribution Platform</h3>
+          <p>Predictive load balancing, real-time DER orchestration, IEC 61850 compliant. Deployed across 12 national utility networks.</p>
+          <a href="#contact" class="t-link">Learn More</a>
+        </div>
+      </div>
+      <div class="t-card" data-r data-d="3">
+        <div class="t-img-wrap">
+          <img class="t-img"
+            src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=85&fit=crop"
+            alt="Industrial Storage"
+            onerror="this.parentElement.style.background='#ddd'"
+          >
+        </div>
+        <div class="t-body">
+          <div class="t-cat">Industrial Energy Storage</div>
+          <h3>QuarkVault — Containerized BESS for Industry &amp; Grid</h3>
+          <p>1MWh–200MWh containerized battery energy storage. Liquid-cooled, fire-suppressed, UL 9540A rated for industrial and utility applications.</p>
+          <a href="#contact" class="t-link">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer><div class="fi"><div><div class="fl">Quark<span>volt</span></div><p style="margin-top:0.4rem">© 2025 Quarkvolt. All rights reserved.</p></div><p style="max-width:240px;text-align:center;line-height:1.7">AI Quantum Energy Intelligence — cutting industrial electricity costs by 40%.</p><div class="flinks"><a onclick="go('feat')">Features</a><a onclick="go('chat')">AI Chat</a><a onclick="go('sale')" style="color:#F59E0B">🏷️ For Sale</a><a onclick="go('contact')">Contact</a></div></div></footer>
+<!-- ═══ WHY CHOOSE ═══ -->
+<section class="sec why-sec">
+  <div class="wrap">
+    <div style="text-align:center" data-r>
+      <div class="tag" style="justify-content:center">Why QuarkVolt</div>
+      <h2 class="sec-h" style="max-width:540px;margin:0 auto 1rem">Science-First Engineering. Industrial-Scale Results.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="w-card" data-r>
+        <div class="w-ico">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <circle cx="17" cy="17" r="13" stroke="#2F80ED" stroke-width="1.5"/>
+            <path d="M11 17c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="17" cy="17" r="2.5" fill="#2F80ED"/>
+          </svg>
+        </div>
+        <h3>Scientific Engineering</h3>
+        <p>80+ in-house PhDs working across electrochemistry, power electronics, and AI-driven energy management systems.</p>
+      </div>
+      <div class="w-card" data-r data-d="1">
+        <div class="w-ico">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <rect x="7" y="9" width="20" height="14" rx="2" stroke="#2F80ED" stroke-width="1.5"/>
+            <line x1="7" y1="17" x2="27" y2="17" stroke="#000" stroke-width="1" stroke-dasharray="3 2"/>
+            <path d="M5 16h2M27 16h2" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M14 23v3M20 23v3" stroke="#2F80ED" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>High Energy Density Systems</h3>
+        <p>Industry-leading 450Wh/kg cell technology with proprietary solid-electrolyte interface and thermal runaway prevention.</p>
+      </div>
+      <div class="w-card" data-r data-d="2">
+        <div class="w-ico">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <path d="M17 4l2 6h6l-5 3.5 2 6L17 16l-5 3.5 2-6L9 10h6z" stroke="#2F80ED" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="17" cy="26" r="4" stroke="#000" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>Industrial Reliability</h3>
+        <p>99% system uptime SLA across deployed networks. Redundant architecture with predictive fault detection and zero-downtime firmware updates.</p>
+      </div>
+      <div class="w-card" data-r>
+        <div class="w-ico">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <rect x="6" y="6" width="22" height="22" rx="2" stroke="#2F80ED" stroke-width="1.5"/>
+            <path d="M11 17h12M17 11v12" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Smart Power Technology</h3>
+        <p>AI-driven energy optimization with real-time grid response, vehicle-to-grid bidirectional charging, and demand forecasting.</p>
+      </div>
+      <div class="w-card" data-r data-d="1">
+        <div class="w-ico">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <circle cx="17" cy="17" r="13" stroke="#2F80ED" stroke-width="1.5"/>
+            <path d="M10 17h14M17 10l7 7-7 7" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Global Compliance</h3>
+        <p>IEC 62133, UL 9540, UN 38.3, CE Mark, RoHS, and REACH certified. Systems approved for deployment in 40+ regulatory jurisdictions.</p>
+      </div>
+      <div class="w-card" data-r data-d="2">
+        <div class="w-ico">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+            <path d="M6 28V14l11-8 11 8v14" stroke="#2F80ED" stroke-width="1.5" stroke-linejoin="round"/>
+            <rect x="13" y="20" width="8" height="8" stroke="#000" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3>Future-Proof Infrastructure</h3>
+        <p>Modular, upgradeable platform architecture. Software-defined battery management with 10-year technology roadmap for enterprise buyers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INDUSTRIES ═══ -->
+<section id="industries" class="sec ind-sec">
+  <div class="wrap">
+    <div style="text-align:center" data-r>
+      <div class="tag" style="justify-content:center">Market Sectors</div>
+      <h2 class="sec-h" style="max-width:520px;margin:0 auto 1rem">Industries We Serve</h2>
+      <p class="sec-p" style="margin:0 auto;text-align:center">Advanced energy systems deployed across transport, utility, industrial, and smart city markets worldwide.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="i-card" data-r>
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&fit=crop" alt="EV" onerror="this.style.display='none'">
+        <div class="i-over"><div class="i-num">Sector 01</div><h3>EV Charging Infrastructure</h3></div>
+      </div>
+      <div class="i-card" data-r data-d="1">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=700&q=80&fit=crop" alt="Renewable" onerror="this.style.display='none'">
+        <div class="i-over"><div class="i-num">Sector 02</div><h3>Renewable Energy Systems</h3></div>
+      </div>
+      <div class="i-card" data-r data-d="2">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80&fit=crop" alt="Smart Cities" onerror="this.style.display='none'">
+        <div class="i-over"><div class="i-num">Sector 03</div><h3>Smart Cities &amp; Municipalities</h3></div>
+      </div>
+      <div class="i-card" data-r>
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80&fit=crop" alt="Utilities" onerror="this.style.display='none'">
+        <div class="i-over"><div class="i-num">Sector 04</div><h3>Utilities &amp; Grid Operators</h3></div>
+      </div>
+      <div class="i-card" data-r data-d="1">
+        <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=700&q=80&fit=crop" alt="Industrial" onerror="this.style.display='none'">
+        <div class="i-over"><div class="i-num">Sector 05</div><h3>Industrial Manufacturing</h3></div>
+      </div>
+      <div class="i-card" data-r data-d="2">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80&fit=crop" alt="Commercial" onerror="this.style.display='none'">
+        <div class="i-over"><div class="i-num">Sector 06</div><h3>Commercial Buildings</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ R&D / INNOVATION ═══ -->
+<section id="rnd" class="sec rnd-sec">
+  <div class="wrap">
+    <div class="rnd-grid">
+      <div data-r>
+        <div class="tag">Research &amp; Innovation</div>
+        <h2 class="sec-h">Built for Tomorrow's Energy Demands</h2>
+        <p class="sec-p" style="max-width:100%;margin-bottom:1.2rem">Our research facilities operate at the intersection of materials science, power electronics, and machine learning. QuarkVolt's battery innovation lab runs 24/7 accelerated lifecycle testing — validating 15-year field performance in under 6 months.</p>
+        <p class="sec-p" style="max-width:100%">From solid-state electrolyte development to sub-millisecond grid response systems, every QuarkVolt platform is validated through 10,000+ hours of accelerated testing before commercial deployment.</p>
+        <div class="rnd-stats">
+          <div class="rs"><span class="rs-n">500+</span><span class="rs-l">Energy Projects</span></div>
+          <div class="rs"><span class="rs-n">40+</span><span class="rs-l">Countries Served</span></div>
+          <div class="rs"><span class="rs-n">99%</span><span class="rs-l">System Reliability</span></div>
+          <div class="rs"><span class="rs-n">15 Yrs</span><span class="rs-l">Innovation Record</span></div>
+        </div>
+      </div>
+      <div data-r data-d="2">
+        <img class="rnd-img"
+          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=90&fit=crop&crop=right"
+          alt="QuarkVolt Innovation Lab"
+          onerror="this.style.background='#ddd'"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT — LIGHT ═══ -->
+<section id="contact" class="sec contact-sec">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="c-info" data-r>
+        <div class="tag">Get in Touch</div>
+        <h2 class="sec-h">Partner With the <em style="font-style:normal;color:var(--blue)">Future of Energy</em></h2>
+        <p class="sec-p">Our enterprise partnerships team and technical sales engineers are ready to discuss your project requirements, system specifications, and technology roadmap.</p>
+        <div class="c-details">
+          <div class="c-row"><span class="lbl">Phone</span><a href="tel:+923020786476">+92 302 0786476</a></div>
+          <div class="c-row"><span class="lbl">Email</span><a href="mailto:azeem.anwar.b@gmail.com">azeem.anwar.b@gmail.com</a></div>
+          <div class="c-row"><span class="lbl">Reach</span><span>Global Operations — 40+ Countries</span></div>
+        </div>
+        <div style="font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#bbb;margin-bottom:.8rem">Inquiry Types</div>
+        <div class="c-badges">
+          <span class="c-badge">Technology Partnership</span>
+          <span class="c-badge">Product Quote</span>
+          <span class="c-badge">R&amp;D Collaboration</span>
+          <span class="c-badge">Investment</span>
+        </div>
+      </div>
+      <div data-r data-d="2">
+        <form class="lform" id="cForm" onsubmit="sendForm(event,'contact','cMsg')">
+          <div class="lform-row">
+            <input class="linput" type="text" name="name" placeholder="Full Name" required>
+            <input class="linput" type="email" name="email" placeholder="Email Address" required>
+          </div>
+          <input class="linput" type="text" name="company" placeholder="Company / Organization">
+          <select class="linput" name="inquiry_type">
+            <option value="">Select Inquiry Type</option>
+            <option>Technology Partnership</option>
+            <option>Product / System Quote</option>
+            <option>R&amp;D Collaboration</option>
+            <option>Investment Relations</option>
+            <option>Media / Press</option>
+          </select>
+          <textarea class="linput" name="message" rows="5" placeholder="Describe your project or energy system requirements..." required></textarea>
+          <div class="lform-btns">
+            <button type="submit" class="lbtn-blue">Request Partnership</button>
+            <button type="button" class="lbtn-blk">Contact Team</button>
+          </div>
+          <div class="fmsg" id="cMsg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DOMAIN INQUIRY ═══ -->
+<section id="domain" class="sec domain-sec">
+  <div class="wrap">
+    <div class="domain-inner">
+      <div class="tag" data-r>Domain Acquisition</div>
+      <h2 class="sec-h" data-r>Interested in Acquiring QuarkVolt.com?</h2>
+      <div class="domain-box" data-r>
+        <p>QuarkVolt.com is a premium science-driven brand name — ideal for battery technology companies, clean energy ventures, EV infrastructure firms, and future energy investors. The name combines quantum-scale precision ("Quark") with electrical energy ("Volt") — conveying advanced technology and scientific authority in a single, memorable brand.</p>
+      </div>
+      <form class="dform" id="dForm" onsubmit="sendForm(event,'domain','dMsg')" data-r>
+        <input class="linput" type="text" name="name" placeholder="Your Full Name" required>
+        <input class="linput" type="text" name="company" placeholder="Company Name">
+        <input class="linput" type="email" name="email" placeholder="Email Address" required>
+        <select class="linput" name="budget">
+          <option value="">Budget Range (USD)</option>
+          <option>Under $5,000</option>
+          <option>$5,000 – $15,000</option>
+          <option>$15,000 – $50,000</option>
+          <option>$50,000 – $100,000</option>
+          <option>$100,000+</option>
+        </select>
+        <input class="linput" type="text" name="intended_use" placeholder="Intended Use (e.g. Battery Tech Brand, EV Startup)">
+        <textarea class="linput dfull" name="message" rows="4" placeholder="Tell us about your acquisition interest and intended brand use..."></textarea>
+        <button type="submit" class="dbtn dfull">Inquire About Domain →</button>
+        <div class="fmsg dfull" id="dMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER — LIGHT ═══ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="f-brand">
+        <div class="qv-logo">QuarkVolt<sup style="font-size:9px;color:#2F80ED;vertical-align:super">™</sup></div>
+        <p>Advanced energy technology — lithium battery systems, EV charging infrastructure, smart grid platforms, and industrial storage.</p>
+        <div class="f-socials">
+          <a href="#" class="f-soc">in</a>
+          <a href="#" class="f-soc">tw</a>
+          <a href="#" class="f-soc">yt</a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Technology</h4>
+        <a href="#products">Battery Systems</a>
+        <a href="#products">EV Charging</a>
+        <a href="#products">Smart Grid</a>
+        <a href="#products">Industrial BESS</a>
+        <a href="#products">Power Distribution</a>
+      </div>
+      <div class="f-col">
+        <h4>Company</h4>
+        <a href="#about">About QuarkVolt</a>
+        <a href="#industries">Industries</a>
+        <a href="#rnd">Innovation Lab</a>
+        <a href="#contact">Partnerships</a>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <a href="tel:+923020786476">+92 302 0786476</a>
+        <a href="mailto:azeem.anwar.b@gmail.com">azeem.anwar.b@gmail.com</a>
+        <a href="#domain" style="color:var(--blue);margin-top:.5rem">Domain For Sale</a>
+      </div>
+    </div>
+    <div class="foot-tagline">QuarkVolt — Engineering the Future of Intelligent Energy</div>
+    <div class="foot-bottom">
+      <span>© 2025 QuarkVolt. All rights reserved. QuarkVolt.com is available for acquisition.</span>
+      <span>Interested in acquiring this domain? <a href="#domain">Click here →</a></span>
+    </div>
+  </div>
+</footer>
 
 <script>
-const _p={w:'92'+'30'+'20'+'78'+'64'+'76'};
-function openWA(){window.open('https://wa.me/'+_p.w+'?text=Hi!+Interested+in+Quarkvolt.com','_blank')}
-function go(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'})}
-const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('on')}),{threshold:0.08});
-document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
-let uF=null,uD=null,cH=[];
-function hFile(inp){const f=inp.files[0];if(!f)return;uF=f;document.getElementById('upNm').textContent=f.name;document.getElementById('upPrev').classList.add('show');const r=new FileReader();r.onload=e=>{uD=e.target.result};r.readAsDataURL(f)}
-function rmUp(){uF=null;uD=null;document.getElementById('upPrev').classList.remove('show');document.getElementById('fi').value=''}
-function aMsg(t,isU,img=null){const m=document.getElementById('botMsgs');const w=document.createElement('div');w.className='bm '+(isU?'u':'bot');w.innerHTML=`<div class="bmav ${isU?'u':'b'}">${isU?'👤':'⚡'}</div><div class="bb">${t}${img?`<img src="${img}" class="img-p">`:''}${uF&&isU&&!uF.type.startsWith('image/')?`<div style="display:flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.2);border-radius:8px;padding:0.4rem 0.7rem;margin-top:0.5rem;font-size:0.74rem">📎 ${uF.name}</div>`:''}</div>`;m.appendChild(w);m.scrollTop=m.scrollHeight}
-function shT(){const m=document.getElementById('botMsgs');const d=document.createElement('div');d.id='tW';d.className='bm bot';d.innerHTML='<div class="bmav b">⚡</div><div class="tind show"><div class="td"></div><div class="td"></div><div class="td"></div></div>';m.appendChild(d);m.scrollTop=m.scrollHeight}
-function rmT(){document.getElementById('tW')?.remove()}
-function qs(t){document.getElementById('botInp').value=t;snd();document.getElementById('qrs').style.display='none'}
-const SYS=`You are Quarkvolt AI — expert AI assistant for Quarkvolt, a quantum energy intelligence platform that helps factories and industries save up to 40% on electricity costs. You are professional, knowledgeable, and enthusiastic about clean energy. Help users with energy optimization, electricity bill analysis, cost savings calculations, and technical questions. If an image of an electricity bill is shared, analyze it and provide specific savings recommendations. Always encourage contacting us for a free energy audit. Keep responses concise and practical. Use bullet points for clarity.`;
-async function snd(){const inp=document.getElementById('botInp');const t=inp.value.trim();if(!t&&!uF)return;const btn=document.getElementById('botSend');btn.disabled=true;const img=uF&&uF.type.startsWith('image/')?uD:null;aMsg(t||(uF?`Uploaded: ${uF.name}`:''),true,img);inp.value='';document.getElementById('qrs').style.display='none';shT();let uc=[];if(uD){uc.push({type:'image',source:{type:'base64',media_type:uF.type,data:uD.split(',')[1]}});}uc.push({type:'text',text:t||(uF?'Please analyze this document and provide energy insights.':'Hello')});cH.push({role:'user',content:uc});try{const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:800,system:SYS,messages:cH})});const d=await r.json();rmT();const rep=d.content?.[0]?.text||'Connection issue. Please WhatsApp us!';const fmt=rep.replace(/\*\*(.*?)\*\*/g,'<b>$1</b>').replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');cH.push({role:'assistant',content:rep});aMsg(fmt,false);}catch(e){rmT();aMsg('Connection issue. Please WhatsApp us for help! 😊',false);}uF=null;uD=null;document.getElementById('upPrev').classList.remove('show');document.getElementById('fi').value='';btn.disabled=false;inp.focus();}
-document.getElementById('botInp').addEventListener('input',function(){this.style.height='auto';this.style.height=Math.min(this.scrollHeight,100)+'px'});
-const SH='YOUR_GOOGLE_SCRIPT_URL_HERE';
-async function sub(e){e.preventDefault();const btn=document.getElementById('sb');const fd=new FormData(e.target);const data={name:fd.get('name'),phone:fd.get('phone'),email:fd.get('email'),service:fd.get('service'),message:fd.get('message')||''};btn.textContent='Sending...';btn.disabled=true;try{if(SH==='YOUR_GOOGLE_SCRIPT_URL_HERE'){await new Promise(r=>setTimeout(r,900));}else{await fetch(SH,{method:'POST',mode:'no-cors',body:JSON.stringify(data)});}document.getElementById('mf').style.display='none';document.getElementById('sucBox').style.display='block';}catch(e){btn.textContent='Send Message →';btn.disabled=false;openWA();}}
+/* ── NAV TOGGLE ── */
+function toggleNav(){
+  document.getElementById('mobNav').classList.toggle('open');
+}
+
+/* ── FORM SUBMIT ── */
+const EP='https://script.google.com/macros/s/AKfycbzmHXdoVjS7W60gQy6S-m-hHilYNGuuMxMORDlG8HQf2RnOMH2SdiIVc3iSIKqFGtTU/exec';
+
+async function sendForm(e,type,msgId){
+  e.preventDefault();
+  const form=e.target,
+        msgEl=document.getElementById(msgId),
+        btn=form.querySelector('button[type=submit]'),
+        orig=btn.textContent;
+  btn.textContent='Sending…';btn.disabled=true;
+  msgEl.className='fmsg';
+
+  const p=new URLSearchParams();
+  p.append('website_source','QuarkVolt.com');
+  p.append('inquiry_type',type==='domain'?'Domain Purchase':'Partnership');
+  p.append('timestamp',new Date().toISOString());
+  new FormData(form).forEach((v,k)=>p.append(k,v));
+
+  try{
+    await fetch(EP,{method:'POST',mode:'no-cors',body:p});
+    msgEl.textContent=type==='domain'
+      ?'Thank you! We will be in touch regarding the QuarkVolt.com domain acquisition.'
+      :'Thank you! Our partnerships team will respond within 1 business day.';
+    msgEl.className='fmsg ok';
+    form.reset();
+  }catch(err){
+    msgEl.textContent='Submission error — please email azeem.anwar.b@gmail.com directly.';
+    msgEl.className='fmsg err';
+  }finally{btn.textContent=orig;btn.disabled=false;}
+}
+
+/* ── SCROLL REVEAL (hero excluded — no data-r on hero) ── */
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){en.target.classList.add('on');io.unobserve(en.target);}
+  });
+},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('[data-r]').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
